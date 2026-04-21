@@ -1,0 +1,25 @@
+[app]
+title = MCV كاشف الشاشة
+package.name = screendetector
+package.domain = org.mahmoud
+source.dir = .
+source.include_exts = py,png,jpg,kv,atlas,json
+version = 1.0
+requirements = python3,kivy==2.2.1,opencv,numpy,pillow,android
+orientation = portrait
+fullscreen = 0
+
+android.permissions = FOREGROUND_SERVICE,SYSTEM_ALERT_WINDOW,MEDIA_PROJECTION
+android.api = 33
+android.minapi = 21
+android.ndk = 25b
+android.ndk_api = 21
+android.accept_sdk_license = True
+android.arch = arm64-v8a
+android.allow_backup = True
+android.logcat_filters = *:S python:D
+android.manifest.attributes = android:requestLegacyExternalStorage="true"
+
+[buildozer]
+log_level = 2
+warn_on_root = 1
